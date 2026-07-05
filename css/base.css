@@ -146,6 +146,18 @@
   footer ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
   footer ul a{color:var(--black);text-decoration:none;font-size:16px;font-weight:400;}
   footer ul a:hover{text-decoration:underline;}
+  footer .copy-contact{
+    appearance:none;background:none;border:none;padding:0;margin:0;
+    color:var(--black);font:inherit;font-size:16px;font-weight:400;
+    cursor:pointer;text-align:left;transition:color .2s ease,transform .2s ease;
+  }
+  footer .copy-contact:hover{text-decoration:underline;}
+  footer .copy-contact.is-copied{color:var(--green);animation:copy-contact-pop .4s ease;}
+  @keyframes copy-contact-pop{
+    0%{transform:scale(1);}
+    35%{transform:scale(1.06);}
+    100%{transform:scale(1);}
+  }
   .foot-bottom{margin-top:80px;padding-top:30px;border-top:1px solid var(--stroke);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;font-weight:400;color:var(--secondary);}
 
   /* ============ CHAT BUBBLE ============ */
@@ -166,6 +178,7 @@
   @media (prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none;}
     .btn,.text-link{transition:none;}
+    footer .copy-contact.is-copied{animation:none;}
   }
 
   @media (max-width:1080px){
