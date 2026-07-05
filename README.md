@@ -47,9 +47,12 @@ js/pricing.js                     Pricing page init
 js/censor-chars.js                Rotating censor characters (GSAP)
 js/mca.js                         MCA calculator and counters
 js/reconciliation.js              Reconciliation page counters
+public/js/posthog.js              PostHog analytics (all pages)
 public/assets/                    Images from pace-landing reference
 ```
 
 ## Source
 
 The main page design comes from `alic-landing-page-2.html`. MCA and reconciliation content is ported from the `pace-landing` repo, restyled to match this lander's design system (Cambo, Geist Mono, Aspekta).
+
+External dependencies (CDN): Google Fonts, Aspekta, GSAP, PostHog (`public/js/posthog.js`).
