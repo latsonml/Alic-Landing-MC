@@ -151,7 +151,7 @@
   /* ============ CHAT BUBBLE ============ */
   .chat-bubble{
     position:fixed;bottom:28px;right:28px;z-index:200;
-    background:var(--black);color:var(--white);
+    background:var(--black);color:var(--white);text-decoration:none;
     font-family:var(--font-button);font-size:14px;text-transform:uppercase;
     padding:16px 24px;border-radius:100px;border:none;cursor:pointer;
     display:flex;align-items:center;gap:10px;
