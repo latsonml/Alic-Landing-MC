@@ -160,19 +160,6 @@
   }
   .foot-bottom{margin-top:80px;padding-top:30px;border-top:1px solid var(--stroke);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;font-weight:400;color:var(--secondary);}
 
-  /* ============ CHAT BUBBLE ============ */
-  .chat-bubble{
-    position:fixed;bottom:28px;right:28px;z-index:200;
-    background:var(--black);color:var(--white);text-decoration:none;
-    font-family:var(--font-button);font-size:14px;text-transform:uppercase;
-    padding:16px 24px;border-radius:100px;border:none;cursor:pointer;
-    appearance:none;
-    display:flex;align-items:center;gap:10px;
-    box-shadow:0 12px 30px rgba(22,21,21,.3);
-  }
-  .chat-bubble:hover{background:#2a2828;}
-  .chat-dot{width:10px;height:10px;border-radius:50%;background:var(--green);}
-
   /* ============ REVEAL ============ */
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
   .reveal.in{opacity:1;transform:none;}
