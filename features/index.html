@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<meta name="theme-color" content="#49c5b6">
+<title>Features — Alic</title>
+<meta name="description" content="Forecast cash, see every account in one place, model scenarios, and get paid faster with Alic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cambo&family=Geist+Mono:wght@500&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aspekta@latest/css/aspekta.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/lander-cards.css">
+<link rel="stylesheet" href="/css/features.css">
+</head>
+<body class="page-features">
+
+<div class="announce">
+  See your cash clearly from day one. <a href="/pricing/">Get started today.</a>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="/" aria-label="Alic — home"><span class="brand-mark">Alic<sup>®</sup></span><span class="brand-tag">For Business</span></a>
+    <div class="nav-right">
+      <a class="btn btn-outline btn-sm" href="https://app.getalic.com/login">Log in</a>
+      <a class="btn btn-green btn-sm" href="https://app.getalic.com/">Get Started Today <span class="arrow">→</span></a>
+    </div>
+  </div>
+</nav>
+
+<header class="features-hero">
+  <div class="container reveal">
+    <h1 class="h1">Everything you need to<br><span class="hl">manage cash flow</span></h1>
+    <p class="lede p2">One platform that shows you what's coming, where your money sits, and how every decision plays out — before it happens.</p>
+    <nav class="feature-nav" aria-label="Features on this page">
+      <a href="#forecasting">Forecasting</a>
+      <a href="#cash-visibility">Cash visibility</a>
+      <a href="#scenarios">Scenarios</a>
+      <a href="#collections">Collections</a>
+    </nav>
+  </div>
+</header>
+
+<section class="feature-section" id="forecasting">
+  <div class="container feature-row">
+    <div class="feature-copy reveal">
+      <p class="feature-eyebrow mono">01 · Forecasting</p>
+      <h2 class="h2">Know your runway, always</h2>
+      <p class="feature-lede">Forecast cash weeks ahead using live bank data — not last month's export.</p>
+      <ul class="check-list feature-list">
+        <li><span class="check">✓</span> 4-week rolling forecast, updated daily as money moves</li>
+        <li><span class="check">✓</span> Shortfall alerts before you hit the crunch — not after</li>
+        <li><span class="check">✓</span> Built from live bank, invoice, bill, and payroll data</li>
+        <li><span class="check">✓</span> Minimum-buffer warnings so you never dip below your floor</li>
+      </ul>
+    </div>
+    <div class="feature-visual reveal">
+        <div class="lander-card-wrap">
+          <div class="lander-card-ui forecast-card-ui" role="img" aria-label="Alic forecast dashboard showing cash position and runway">
+            <div class="fc-top">
+              <div>
+                <div class="fc-crumb">Acme Inc. › Forecast</div>
+                <h2>Forecast</h2>
+              </div>
+              <div class="fc-range"><span>30 days</span><span class="is-on">90 days</span><span>6 months</span></div>
+            </div>
+
+            <div class="fc-metrics">
+              <div class="fc-metric">
+                <div class="fc-lbl">Current balance</div>
+                <div class="fc-val">$128,400</div>
+                <div class="fc-sub is-plain">Live · synced 2 min ago</div>
+              </div>
+              <div class="fc-metric">
+                <div class="fc-lbl">Lowest projected</div>
+                <div class="fc-val">$21,900</div>
+                <div class="fc-sub is-plain">Aug 14 · below buffer</div>
+              </div>
+              <div class="fc-metric">
+                <div class="fc-lbl">Days to shortfall</div>
+                <div class="fc-val">42</div>
+                <div class="fc-sub is-warn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.8L2.6 17a2 2 0 001.7 3h15.4a2 2 0 001.7-3L13.7 3.8a2 2 0 00-3.4 0z"/></svg>Buffer breach · Aug 14</div>
+              </div>
+            </div>
+
+            <div class="fc-chartcard">
+              <h3>Cash position · next 90 days</h3>
+              <div class="fc-chart-sub">Actual from 4 linked accounts · forecast from open invoices, bills, and payroll</div>
+              <svg viewBox="0 0 920 330" width="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <line x1="64" y1="35" x2="900" y2="35" stroke="#EEF0F3"/>
+                <line x1="64" y1="112" x2="900" y2="112" stroke="#EEF0F3"/>
+                <line x1="64" y1="189" x2="900" y2="189" stroke="#EEF0F3"/>
+                <line x1="64" y1="266" x2="900" y2="266" stroke="#E4E7EC"/>
+                <text x="56" y="39" text-anchor="end" font-size="12" fill="#8A94A6">$150k</text>
+                <text x="56" y="116" text-anchor="end" font-size="12" fill="#8A94A6">$100k</text>
+                <text x="56" y="193" text-anchor="end" font-size="12" fill="#8A94A6">$50k</text>
+                <text x="56" y="270" text-anchor="end" font-size="12" fill="#8A94A6">$0</text>
+                <rect x="64" y="227.5" width="836" height="38.5" fill="#FEF0EF"/>
+                <line x1="64" y1="227.5" x2="900" y2="227.5" stroke="#F3C6C1" stroke-dasharray="3 3"/>
+                <text x="894" y="242" text-anchor="end" font-size="11.5" fill="#A32D2D">Min buffer $25k</text>
+                <line x1="470" y1="26" x2="470" y2="266" stroke="#CDD3DC" stroke-dasharray="2 3"/>
+                <rect x="445" y="9" width="50" height="19" rx="9.5" fill="#F1F3F5"/>
+                <text x="470" y="23" text-anchor="middle" font-size="11.5" fill="#5B6472">Today</text>
+                <polyline points="64,124 122,115 180,121 240,100 300,105 358,90 412,82 470,70" fill="none" stroke="#1E3A5F" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                <polyline points="470,70 528,98 586,134 644,175 700,211 748,232 788,221 830,197 900,176" fill="none" stroke="#8A94A6" stroke-width="3" stroke-dasharray="6 6" stroke-linejoin="round" stroke-linecap="round"/>
+                <circle cx="470" cy="70" r="5" fill="#1E3A5F"/>
+                <circle cx="748" cy="232" r="5" fill="#fff" stroke="#D92D20" stroke-width="2.5"/>
+                <rect x="698" y="254" width="100" height="21" rx="10.5" fill="#FCEBEB"/>
+                <text x="748" y="269" text-anchor="middle" font-size="11.5" fill="#A32D2D" font-weight="500">Low · $21.9k</text>
+                <text x="64" y="296" font-size="12" fill="#8A94A6">Jun 8</text>
+                <text x="300" y="296" text-anchor="middle" font-size="12" fill="#8A94A6">Jun 29</text>
+                <text x="470" y="296" text-anchor="middle" font-size="12" fill="#8A94A6">Jul 6</text>
+                <text x="700" y="296" text-anchor="middle" font-size="12" fill="#8A94A6">Aug 17</text>
+                <text x="900" y="296" text-anchor="end" font-size="12" fill="#8A94A6">Sep 14</text>
+              </svg>
+              <div class="fc-legend">
+                <span><span class="fc-sw"></span>Actual balance</span>
+                <span><span class="fc-sw is-forecast"></span>Forecast balance</span>
+                <span><span class="fc-sw is-zone"></span>Below minimum buffer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section feature-section--cream" id="cash-visibility">
+  <div class="container feature-row feature-row--reverse">
+    <div class="feature-copy reveal">
+      <p class="feature-eyebrow mono">02 · Cash visibility</p>
+      <h2 class="h2">Every account, one view</h2>
+      <p class="feature-lede">Stop tab-hopping between bank portals. See your whole cash position at a glance.</p>
+      <ul class="check-list feature-list">
+        <li><span class="check">✓</span> Every bank, entity, and currency in one live dashboard</li>
+        <li><span class="check">✓</span> Multi-entity consolidation with automatic FX conversion</li>
+        <li><span class="check">✓</span> Sync status on every account, refreshed continuously</li>
+        <li><span class="check">✓</span> Read-only connections — we never move your money</li>
+      </ul>
+    </div>
+    <div class="feature-visual reveal">
+        <div class="lander-card-wrap">
+          <div class="lander-card-ui accounts-card-ui" role="img" aria-label="Alic accounts dashboard showing total cash position across entities">
+            <div class="ac-top">
+              <div>
+                <div class="ac-crumb">Acme Inc. › Accounts</div>
+                <h2>Accounts</h2>
+              </div>
+              <span class="ac-connect-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Connect bank</span>
+            </div>
+
+            <div class="ac-hero">
+              <div>
+                <div class="ac-lbl">Total cash position</div>
+                <div class="ac-val">$412,806 <small>USD equivalent</small></div>
+                <div class="ac-meta"><span class="ac-live"></span>Live · 3 entities · 7 accounts · updated 2 min ago</div>
+              </div>
+              <div class="ac-fx">
+                <div class="ac-chip"><small>USD</small><b>$268,470</b></div>
+                <div class="ac-chip"><small>GBP</small><b>£71,240</b></div>
+                <div class="ac-chip"><small>EUR</small><b>€49,860</b></div>
+              </div>
+            </div>
+
+            <div class="ac-entity">
+              <div class="ac-ehead">
+                <span class="ac-en"><span class="ac-flag">🇺🇸</span>Acme Inc.</span>
+                <span class="ac-et">4 accounts · <b>$268,470</b></span>
+              </div>
+              <div class="ac-row">
+                <div class="ac-acct"><span class="ac-bank" style="background:#0B60A9;">CH</span><span><b>Chase Business Operating</b><small>Checking ··4021</small></span></div>
+                <span class="ac-ccy">USD</span><span class="ac-bal">$184,220</span>
+                <span class="ac-sync"><span class="ac-dot"></span>2 min ago</span>
+              </div>
+              <div class="ac-row">
+                <div class="ac-acct"><span class="ac-bank" style="background:#4A4F57;">ME</span><span><b>Mercury Reserve</b><small>Checking ··1195</small></span></div>
+                <span class="ac-ccy">USD</span><span class="ac-bal">$14,530</span>
+                <span class="ac-sync"><span class="ac-dot"></span>6 min ago</span>
+              </div>
+            </div>
+
+            <div class="ac-entity">
+              <div class="ac-ehead">
+                <span class="ac-en"><span class="ac-flag">🇬🇧</span>Acme Ltd</span>
+                <span class="ac-et">2 accounts · <b>£71,240</b> · $90,180 USD</span>
+              </div>
+              <div class="ac-row">
+                <div class="ac-acct"><span class="ac-bank" style="background:#00AEEF;">BA</span><span><b>Barclays Business Current</b><small>Current ··6642</small></span></div>
+                <span class="ac-ccy">GBP</span><span class="ac-bal">£58,940</span>
+                <span class="ac-sync"><span class="ac-dot"></span>4 min ago</span>
+              </div>
+            </div>
+
+            <div class="ac-entity">
+              <div class="ac-ehead">
+                <span class="ac-en"><span class="ac-flag">🇩🇪</span>Acme GmbH</span>
+                <span class="ac-et">1 account · <b>€49,860</b> · $54,156 USD</span>
+              </div>
+              <div class="ac-row">
+                <div class="ac-acct"><span class="ac-bank" style="background:#26355D;">N26</span><span><b>N26 Business</b><small>Checking ··2280</small></span></div>
+                <span class="ac-ccy">EUR</span><span class="ac-bal">€49,860</span>
+                <span class="ac-sync"><span class="ac-dot"></span>3 min ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section" id="scenarios">
+  <div class="container feature-row">
+    <div class="feature-copy reveal">
+      <p class="feature-eyebrow mono">03 · Scenarios</p>
+      <h2 class="h2">Test decisions before you make them</h2>
+      <p class="feature-lede">What if a big customer pays late? What if you hire next quarter? Find out in seconds.</p>
+      <ul class="check-list feature-list">
+        <li><span class="check">✓</span> Toggle what-ifs on and off — the forecast updates instantly</li>
+        <li><span class="check">✓</span> Model late payments, hires, credit draws, and spend cuts</li>
+        <li><span class="check">✓</span> See the impact on lowest balance and days-to-shortfall</li>
+        <li><span class="check">✓</span> Compare any scenario against your baseline side by side</li>
+      </ul>
+    </div>
+    <div class="feature-visual reveal">
+        <div class="lander-card-wrap">
+          <div class="lander-card-ui scenarios-card-ui" role="img" aria-label="Alic scenarios dashboard comparing baseline and what-if forecasts">
+            <div class="sc-top">
+              <div class="sc-crumb">Acme Inc. › Scenarios</div>
+              <h2>Scenarios</h2>
+            </div>
+            <div class="sc-grid">
+              <div class="sc-panel">
+                <div class="sc-phead">
+                  <h3>What-ifs</h3>
+                  <p>Toggle scenarios to see the impact instantly.</p>
+                </div>
+                <div class="sc-scn is-on">
+                  <span class="sc-tgl"></span>
+                  <span>
+                    <b>Northwind pays 30 days late</b>
+                    <small>$45,000 invoice shifts Jul 22 → Aug 21.</small>
+                    <span class="sc-amt is-neg">−$45,000 in July</span>
+                  </span>
+                </div>
+                <div class="sc-scn is-on">
+                  <span class="sc-tgl"></span>
+                  <span>
+                    <b>Hire 2 engineers in Q3</b>
+                    <small>Payroll and benefits from Aug 1.</small>
+                    <span class="sc-amt is-neg">−$28,400 / month</span>
+                  </span>
+                </div>
+                <div class="sc-scn is-off">
+                  <span class="sc-tgl"></span>
+                  <span>
+                    <b>Draw $50k line of credit</b>
+                    <small>12 month term.</small>
+                    <span class="sc-amt is-pos">+$50,000 in August</span>
+                  </span>
+                </div>
+                <div class="sc-scn is-off">
+                  <span class="sc-tgl"></span>
+                  <span>
+                    <b>Cut contractor spend 20%</b>
+                    <small>4 recurring vendors.</small>
+                    <span class="sc-amt is-pos">+$6,100 / month</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="sc-right">
+                <div class="sc-impact">
+                  <div class="sc-metric">
+                    <div class="sc-lbl">Lowest projected balance</div>
+                    <div class="sc-val">$8,700</div>
+                    <div class="sc-delta is-neg">−$54,200 vs baseline</div>
+                  </div>
+                  <div class="sc-metric">
+                    <div class="sc-lbl">Days to shortfall</div>
+                    <div class="sc-val">31</div>
+                    <div class="sc-delta is-warn">Moves up 17 days</div>
+                  </div>
+                </div>
+
+                <div class="sc-chartcard">
+                  <h3>Baseline vs scenario · next 90 days</h3>
+                  <svg viewBox="0 0 620 300" width="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <line x1="52" y1="28" x2="600" y2="28" stroke="#EEF0F3"/>
+                    <line x1="52" y1="98" x2="600" y2="98" stroke="#EEF0F3"/>
+                    <line x1="52" y1="168" x2="600" y2="168" stroke="#EEF0F3"/>
+                    <line x1="52" y1="238" x2="600" y2="238" stroke="#E4E7EC"/>
+                    <text x="45" y="32" text-anchor="end" font-size="11" fill="#8A94A6">$150k</text>
+                    <text x="45" y="102" text-anchor="end" font-size="11" fill="#8A94A6">$100k</text>
+                    <text x="45" y="172" text-anchor="end" font-size="11" fill="#8A94A6">$50k</text>
+                    <text x="45" y="242" text-anchor="end" font-size="11" fill="#8A94A6">$0</text>
+                    <rect x="52" y="203" width="548" height="35" fill="#FEF0EF"/>
+                    <line x1="52" y1="203" x2="600" y2="203" stroke="#F3C6C1" stroke-dasharray="3 3"/>
+                    <text x="594" y="217" text-anchor="end" font-size="10.5" fill="#A32D2D">Min buffer $25k</text>
+                    <polyline points="52,58 132,74 212,98 292,124 362,146 432,164 502,174 552,167 600,156" fill="none" stroke="#1E3A5F" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+                    <polyline points="52,58 132,78 212,112 292,152 362,184 432,208 502,222 552,217 600,207" fill="none" stroke="#2FA98F" stroke-width="2.5" stroke-dasharray="6 6" stroke-linejoin="round" stroke-linecap="round"/>
+                    <circle cx="502" cy="222" r="4.5" fill="#fff" stroke="#A32D2D" stroke-width="2.5"/>
+                    <rect x="460" y="242" width="84" height="20" rx="10" fill="#FCEBEB"/>
+                    <text x="502" y="256" text-anchor="middle" font-size="10.5" fill="#A32D2D" font-weight="500">Low · $8.7k</text>
+                    <text x="52" y="286" font-size="11" fill="#8A94A6">Jul 6</text>
+                    <text x="292" y="286" text-anchor="middle" font-size="11" fill="#8A94A6">Aug 10</text>
+                    <text x="600" y="286" text-anchor="end" font-size="11" fill="#8A94A6">Oct 4</text>
+                  </svg>
+                  <div class="sc-legend">
+                    <span><span class="sc-sw"></span>Baseline forecast</span>
+                    <span><span class="sc-sw is-scenario"></span>With scenarios</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section feature-section--cream" id="collections">
+  <div class="container feature-row feature-row--reverse">
+    <div class="feature-copy reveal">
+      <p class="feature-eyebrow mono">04 · Collections</p>
+      <h2 class="h2">Get paid without chasing</h2>
+      <p class="feature-lede">Automated reminders do the follow-up, so overdue invoices stop piling up.</p>
+      <ul class="check-list feature-list">
+        <li><span class="check">✓</span> Automated invoice reminders on your schedule</li>
+        <li><span class="check">✓</span> Custom cadences per customer — gentle nudge to firm follow-up</li>
+        <li><span class="check">✓</span> Overdue tracking with sent, opened, and paid status</li>
+        <li><span class="check">✓</span> Collected payments flow straight into your forecast</li>
+      </ul>
+    </div>
+    <div class="feature-visual reveal">
+      <div class="lander-card-wrap">
+        <div class="lander-card-ui collections-card-ui" role="img" aria-label="Alic collections dashboard showing automated invoice reminders and payment statuses">
+          <div class="cl-top">
+            <div>
+              <div class="cl-crumb">Acme Inc. › Collections</div>
+              <h2>Collections</h2>
+            </div>
+            <span class="cl-badge">Auto-reminders on</span>
+          </div>
+          <div class="cl-summary">
+            <div class="cl-metric">
+              <div class="cl-lbl">Outstanding</div>
+              <div class="cl-val">$96,400</div>
+              <div class="cl-sub">11 open invoices</div>
+            </div>
+            <div class="cl-metric">
+              <div class="cl-lbl">Overdue</div>
+              <div class="cl-val is-warn">$31,200</div>
+              <div class="cl-sub">3 invoices past due</div>
+            </div>
+            <div class="cl-metric">
+              <div class="cl-lbl">Collected this month</div>
+              <div class="cl-val is-pos">$58,900</div>
+              <div class="cl-sub">↑ 2x faster vs manual</div>
+            </div>
+          </div>
+          <div class="cl-list">
+            <div class="cl-row">
+              <div class="cl-inv"><b>Northwind Traders</b><small>INV-1042 · $45,000 · due Jul 22</small></div>
+              <span class="cl-status is-sent">Reminder sent</span>
+            </div>
+            <div class="cl-row">
+              <div class="cl-inv"><b>Fabrikam Inc.</b><small>INV-1039 · $18,700 · 12 days overdue</small></div>
+              <span class="cl-status is-overdue">2nd follow-up</span>
+            </div>
+            <div class="cl-row">
+              <div class="cl-inv"><b>Contoso Ltd</b><small>INV-1036 · $12,500 · 4 days overdue</small></div>
+              <span class="cl-status is-opened">Opened today</span>
+            </div>
+            <div class="cl-row">
+              <div class="cl-inv"><b>Adventure Works</b><small>INV-1033 · $9,400 · due Jul 30</small></div>
+              <span class="cl-status is-paid">Paid ✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container reveal">
+    <h2 class="h2">Ready to see your cash clearly?</h2>
+    <a class="btn btn-green" href="https://app.getalic.com/">Get Started Today <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="/" aria-label="Alic — home"><span class="brand-mark">Alic<sup>®</sup></span></a>
+        <p>Cash flow management for business. See your money clearly, plan ahead confidently.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul><li><a href="/features/#forecasting">Forecasting</a></li><li><a href="/features/#cash-visibility">Cash visibility</a></li><li><a href="/features/#scenarios">Scenarios</a></li><li><a href="/features/#collections">Collections</a></li><li><a href="/pricing/">Pricing</a></li></ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul><li><a href="#">About</a></li><li><a href="/#customers">Customers</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul><li><a href="#">Blog</a></li><li><a href="#">Help center</a></li><li><a href="/#integrations">Integrations</a></li><li><a href="#">Security</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Alic. All rights reserved.</span>
+      <span><a href="#" style="color:inherit;">Privacy</a> · <a href="#" style="color:inherit;">Terms</a> · <a href="#" style="color:inherit;">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-bubble" type="button"><span class="chat-dot"></span>Chat with sales</button>
+
+<script type="module" src="/js/features.js"></script>
+</body>
+</html>

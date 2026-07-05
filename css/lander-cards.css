@@ -1,0 +1,674 @@
+/* Lander feature cards — shared scaling shell + forecast, accounts, scenarios */
+
+.lander-card-wrap {
+  width: 100%;
+  aspect-ratio: 1000 / 730;
+  border-radius: 16px;
+  border: 1px solid var(--stroke);
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+.lander-card-ui {
+  --lc-teal: #2fa98f;
+  --lc-teal-deep: #0f6e56;
+  --lc-teal-tint: #eaf7f3;
+  --lc-ink: #16181c;
+  --lc-navy: #1e3a5f;
+  --lc-text-2: #5b6472;
+  --lc-text-3: #8a94a6;
+  --lc-border: #e4e7ec;
+  --lc-border-strong: #cdd3dc;
+  --lc-bg: #fafaf9;
+  --lc-card: #fff;
+  --lc-green: #12805c;
+  --lc-green-tint: #e8f5ef;
+  --lc-amber: #8a5a10;
+  --lc-amber-tint: #fbf3e0;
+  --lc-red: #a32d2d;
+  --lc-red-tint: #fcebeb;
+
+  width: 1000px;
+  height: 730px;
+  transform-origin: top left;
+  transform: scale(calc(100cqw / 1000px));
+  background: var(--lc-bg);
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--lc-ink);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.lander-card-ui *,
+.lander-card-ui *::before,
+.lander-card-ui *::after {
+  box-sizing: border-box;
+}
+
+.lander-card-ui h2,
+.lander-card-ui h3 {
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Forecast */
+.forecast-card-ui .fc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.forecast-card-ui .fc-top h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.forecast-card-ui .fc-crumb {
+  font-size: 12.5px;
+  color: var(--lc-text-3);
+  margin-bottom: 3px;
+}
+
+.forecast-card-ui .fc-range {
+  display: flex;
+  gap: 3px;
+  border: 1px solid var(--lc-border);
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.forecast-card-ui .fc-range span {
+  font-size: 12.5px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  color: var(--lc-text-2);
+}
+
+.forecast-card-ui .fc-range span.is-on {
+  background: var(--lc-teal-tint);
+  color: var(--lc-teal-deep);
+  font-weight: 500;
+}
+
+.forecast-card-ui .fc-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.forecast-card-ui .fc-metric {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 13px;
+  padding: 15px 18px;
+}
+
+.forecast-card-ui .fc-metric .fc-lbl {
+  font-size: 12.5px;
+  color: var(--lc-text-3);
+  margin-bottom: 6px;
+}
+
+.forecast-card-ui .fc-metric .fc-val {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.forecast-card-ui .fc-metric .fc-sub {
+  font-size: 11.5px;
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  font-weight: 500;
+}
+
+.forecast-card-ui .fc-sub.is-warn {
+  background: var(--lc-amber-tint);
+  color: var(--lc-amber);
+}
+
+.forecast-card-ui .fc-sub.is-plain {
+  color: var(--lc-text-3);
+  padding: 3px 0;
+  font-weight: 400;
+}
+
+.forecast-card-ui .fc-chartcard {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 13px;
+  padding: 18px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.forecast-card-ui .fc-chartcard h3 {
+  font-size: 14.5px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.forecast-card-ui .fc-chartcard .fc-chart-sub {
+  font-size: 12px;
+  color: var(--lc-text-3);
+  margin-bottom: 8px;
+}
+
+.forecast-card-ui .fc-chartcard svg {
+  flex: 1;
+  min-height: 0;
+}
+
+.forecast-card-ui .fc-legend {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  color: var(--lc-text-2);
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.forecast-card-ui .fc-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.forecast-card-ui .fc-sw {
+  width: 16px;
+  border-top: 2.5px solid var(--lc-navy);
+  border-radius: 2px;
+}
+
+.forecast-card-ui .fc-sw.is-forecast {
+  border-top-style: dashed;
+  border-color: var(--lc-text-3);
+}
+
+.forecast-card-ui .fc-sw.is-zone {
+  width: 11px;
+  height: 11px;
+  border: none;
+  background: var(--lc-red-tint);
+  border-radius: 3px;
+  outline: 1px solid #f3c6c1;
+}
+
+/* Accounts */
+.accounts-card-ui {
+  gap: 14px;
+}
+
+.accounts-card-ui .ac-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accounts-card-ui .ac-top h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.accounts-card-ui .ac-crumb {
+  font-size: 12.5px;
+  color: var(--lc-text-3);
+  margin-bottom: 3px;
+}
+
+.accounts-card-ui .ac-connect-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  font-weight: 500;
+  background: var(--lc-teal-deep);
+  color: #fff;
+  border-radius: 9px;
+  padding: 9px 16px;
+}
+
+.accounts-card-ui .ac-connect-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+}
+
+.accounts-card-ui .ac-hero {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 13px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.accounts-card-ui .ac-hero .ac-lbl {
+  font-size: 12.5px;
+  color: var(--lc-text-3);
+  margin-bottom: 6px;
+}
+
+.accounts-card-ui .ac-hero .ac-val {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.accounts-card-ui .ac-hero .ac-val small {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--lc-text-3);
+  letter-spacing: 0;
+}
+
+.accounts-card-ui .ac-hero .ac-meta {
+  font-size: 12.5px;
+  color: var(--lc-text-2);
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.accounts-card-ui .ac-live {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lc-green);
+  flex-shrink: 0;
+}
+
+.accounts-card-ui .ac-fx {
+  display: flex;
+  gap: 9px;
+}
+
+.accounts-card-ui .ac-chip {
+  background: var(--lc-bg);
+  border: 1px solid var(--lc-border);
+  border-radius: 10px;
+  padding: 8px 13px;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.accounts-card-ui .ac-chip b {
+  display: block;
+  font-size: 13.5px;
+  margin-top: 1px;
+}
+
+.accounts-card-ui .ac-chip small {
+  color: var(--lc-text-3);
+  font-size: 11px;
+}
+
+.accounts-card-ui .ac-entity {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.accounts-card-ui .ac-ehead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 20px;
+  background: #fcfcfb;
+  border-bottom: 1px solid var(--lc-border);
+}
+
+.accounts-card-ui .ac-ehead .ac-en {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.accounts-card-ui .ac-flag {
+  font-size: 14px;
+}
+
+.accounts-card-ui .ac-ehead .ac-et {
+  font-size: 12.5px;
+  color: var(--lc-text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.accounts-card-ui .ac-ehead .ac-et b {
+  color: var(--lc-ink);
+}
+
+.accounts-card-ui .ac-row {
+  display: grid;
+  grid-template-columns: 1fr 92px 150px 120px;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 20px;
+  border-bottom: 1px solid var(--lc-border);
+}
+
+.accounts-card-ui .ac-row:last-child {
+  border-bottom: none;
+}
+
+.accounts-card-ui .ac-acct {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.accounts-card-ui .ac-bank {
+  width: 31px;
+  height: 31px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  flex: none;
+}
+
+.accounts-card-ui .ac-acct b {
+  font-size: 13.5px;
+  font-weight: 500;
+  display: block;
+}
+
+.accounts-card-ui .ac-acct small {
+  font-size: 11.5px;
+  color: var(--lc-text-3);
+}
+
+.accounts-card-ui .ac-ccy {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--lc-text-2);
+  background: var(--lc-bg);
+  border: 1px solid var(--lc-border);
+  border-radius: 99px;
+  padding: 2.5px 9px;
+  width: max-content;
+}
+
+.accounts-card-ui .ac-bal {
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.accounts-card-ui .ac-sync {
+  font-size: 11.5px;
+  color: var(--lc-text-3);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.accounts-card-ui .ac-sync .ac-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lc-green);
+  flex: none;
+}
+
+/* Scenarios */
+.scenarios-card-ui .sc-top {
+  margin-bottom: 16px;
+}
+
+.scenarios-card-ui .sc-top h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.scenarios-card-ui .sc-crumb {
+  font-size: 12.5px;
+  color: var(--lc-text-3);
+  margin-bottom: 3px;
+}
+
+.scenarios-card-ui .sc-grid {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 14px;
+  flex: 1;
+  min-height: 0;
+}
+
+.scenarios-card-ui .sc-panel {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 13px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.scenarios-card-ui .sc-phead {
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--lc-border);
+}
+
+.scenarios-card-ui .sc-phead h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.scenarios-card-ui .sc-phead p {
+  font-size: 11.5px;
+  color: var(--lc-text-3);
+  margin-top: 2px;
+}
+
+.scenarios-card-ui .sc-scn {
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--lc-border);
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+
+.scenarios-card-ui .sc-scn:last-of-type {
+  border-bottom: none;
+}
+
+.scenarios-card-ui .sc-tgl {
+  width: 34px;
+  height: 20px;
+  border-radius: 99px;
+  background: var(--lc-border-strong);
+  position: relative;
+  flex: none;
+  margin-top: 2px;
+}
+
+.scenarios-card-ui .sc-tgl::after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.scenarios-card-ui .sc-scn.is-on .sc-tgl {
+  background: var(--lc-teal-deep);
+}
+
+.scenarios-card-ui .sc-scn.is-on .sc-tgl::after {
+  left: auto;
+  right: 3px;
+}
+
+.scenarios-card-ui .sc-scn b {
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  line-height: 1.35;
+}
+
+.scenarios-card-ui .sc-scn small {
+  font-size: 11.5px;
+  color: var(--lc-text-3);
+  display: block;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.scenarios-card-ui .sc-amt {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 5px;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+
+.scenarios-card-ui .sc-amt.is-neg {
+  background: var(--lc-red-tint);
+  color: var(--lc-red);
+}
+
+.scenarios-card-ui .sc-amt.is-pos {
+  background: var(--lc-green-tint);
+  color: var(--lc-green);
+}
+
+.scenarios-card-ui .sc-scn.is-off {
+  opacity: 0.55;
+}
+
+.scenarios-card-ui .sc-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.scenarios-card-ui .sc-impact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.scenarios-card-ui .sc-metric {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 13px;
+  padding: 13px 17px;
+}
+
+.scenarios-card-ui .sc-metric .sc-lbl {
+  font-size: 11.5px;
+  color: var(--lc-text-3);
+  margin-bottom: 5px;
+}
+
+.scenarios-card-ui .sc-metric .sc-val {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.scenarios-card-ui .sc-metric .sc-delta {
+  font-size: 11.5px;
+  font-weight: 500;
+  margin-top: 5px;
+  display: inline-flex;
+  padding: 2.5px 8px;
+  border-radius: 99px;
+}
+
+.scenarios-card-ui .sc-delta.is-neg {
+  background: var(--lc-red-tint);
+  color: var(--lc-red);
+}
+
+.scenarios-card-ui .sc-delta.is-warn {
+  background: var(--lc-amber-tint);
+  color: var(--lc-amber);
+}
+
+.scenarios-card-ui .sc-chartcard {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 13px;
+  padding: 15px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.scenarios-card-ui .sc-chartcard h3 {
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.scenarios-card-ui .sc-chartcard svg {
+  flex: 1;
+  min-height: 0;
+}
+
+.scenarios-card-ui .sc-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 11.5px;
+  color: var(--lc-text-2);
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.scenarios-card-ui .sc-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.scenarios-card-ui .sc-sw {
+  width: 15px;
+  border-top: 2.5px solid var(--lc-navy);
+  border-radius: 2px;
+}
+
+.scenarios-card-ui .sc-sw.is-scenario {
+  border-color: var(--lc-teal);
+  border-top-style: dashed;
+}
+
+.lander-card-ui svg text {
+  font-family: inherit;
+}

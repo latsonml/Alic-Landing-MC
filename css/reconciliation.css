@@ -1,0 +1,433 @@
+/* Reconciliation page — recon-specific UI only; layout from service-shared.css */
+
+.page-reconciliation .censor-char {
+  display: inline-block;
+  font-family: var(--font-button);
+  color: var(--green);
+  background: rgba(41, 241, 151, 0.18);
+  min-width: 0.55em;
+  text-align: center;
+  will-change: transform, opacity;
+  border-radius: 4px;
+  padding: 0 0.06em;
+}
+
+.page-reconciliation .recon-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+.page-reconciliation .recon-chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-button);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.page-reconciliation .recon-chips li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
+.page-reconciliation .check-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.page-reconciliation .check-list li {
+  position: relative;
+  padding-left: 36px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--secondary);
+}
+
+.page-reconciliation .check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--black);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.page-reconciliation .recon-audit-copy .sec-head {
+  margin-bottom: 32px;
+  padding: 0;
+  max-width: none;
+}
+
+.page-reconciliation .recon-audit-copy .sec-head h2 {
+  max-width: none;
+  font-size: clamp(28px, 3.5vw, 44px);
+  letter-spacing: -2px;
+}
+
+.page-reconciliation .recon-audit-copy p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--secondary);
+  margin-bottom: 24px;
+}
+
+.page-reconciliation .recon-audit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.page-reconciliation .recon-compare {
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 36px);
+}
+
+.page-reconciliation .service-compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--stroke);
+  font-size: 14px;
+}
+
+.page-reconciliation .service-compare-row:last-child {
+  border-bottom: none;
+}
+
+.page-reconciliation .service-compare-label {
+  font-family: var(--font-button);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.page-reconciliation .service-compare-contract {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.page-reconciliation .service-compare-actual {
+  color: #c44a4a;
+  font-weight: 600;
+}
+
+.page-reconciliation #features .sec-head,
+.page-reconciliation #how-it-works .sec-head {
+  text-align: left;
+}
+
+.page-reconciliation .how-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.page-reconciliation .how-step .how-step-top + h3 {
+  margin-top: 0;
+}
+
+.page-reconciliation .how-step:has(.service-step-num) h3 {
+  margin-top: 0;
+}
+
+.page-reconciliation .how-step:has(.service-step-num) p {
+  margin-bottom: 0;
+}
+
+/* Paths (navy) */
+.page-reconciliation .recon-paths .sec-head {
+  text-align: center;
+}
+
+.page-reconciliation .recon-paths .sec-head h2 {
+  max-width: none;
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.page-reconciliation .recon-paths .sec-head .mono {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.page-reconciliation .recon-paths-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.page-reconciliation .recon-path-card {
+  border-radius: 16px;
+  padding: clamp(28px, 4vw, 40px);
+}
+
+.page-reconciliation .recon-path-card--light {
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  color: var(--black);
+}
+
+.page-reconciliation .recon-path-card--highlight {
+  background: rgba(41, 241, 151, 0.08);
+  border: 2px solid var(--green);
+  color: var(--white);
+}
+
+.page-reconciliation .recon-path-card h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 2.5vw, 28px);
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.page-reconciliation .recon-path-card--light h3 {
+  color: var(--black);
+}
+
+.page-reconciliation .recon-path-card--highlight h3 {
+  color: var(--white);
+}
+
+.page-reconciliation .recon-path-card > p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.page-reconciliation .recon-path-card--light > p {
+  color: var(--secondary);
+}
+
+.page-reconciliation .recon-path-card--highlight > p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.page-reconciliation .recon-path-card--highlight .check-list li {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.page-reconciliation .recon-path-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(41, 241, 151, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #0f6e56;
+}
+
+.page-reconciliation .recon-path-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.page-reconciliation .recon-path-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.page-reconciliation .recon-path-cta {
+  margin-top: 20px;
+}
+
+/* Product */
+.page-reconciliation .recon-product .sec-head {
+  margin-bottom: 24px;
+  padding: 0;
+  max-width: none;
+}
+
+.page-reconciliation .recon-product .sec-head h2 {
+  max-width: none;
+  font-size: clamp(28px, 3.5vw, 44px);
+  letter-spacing: -2px;
+}
+
+.page-reconciliation .recon-product-copy p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--secondary);
+  margin-bottom: 24px;
+}
+
+.page-reconciliation .feature-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.page-reconciliation .browser-frame {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 32px 80px -24px rgba(22, 21, 21, 0.18);
+  border: 1px solid var(--stroke);
+  overflow: hidden;
+  width: 100%;
+  max-width: 420px;
+}
+
+.page-reconciliation .browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--offwhite);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.page-reconciliation .browser-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--stroke);
+}
+
+.page-reconciliation .browser-dot:nth-child(1) { background: #ff5f57; }
+.page-reconciliation .browser-dot:nth-child(2) { background: #febc2e; }
+.page-reconciliation .browser-dot:nth-child(3) { background: #28c840; }
+
+.page-reconciliation .browser-url {
+  margin-left: 8px;
+  font-size: 11px;
+  color: var(--secondary);
+}
+
+.page-reconciliation .ui-card {
+  background: var(--white);
+  padding: 24px;
+  width: 100%;
+}
+
+.page-reconciliation .ui-card-head {
+  margin-bottom: 20px;
+}
+
+.page-reconciliation .recon-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--stroke);
+  font-size: 14px;
+}
+
+.page-reconciliation .recon-row span:first-child {
+  color: var(--secondary);
+}
+
+.page-reconciliation .recon-amt {
+  font-family: var(--font-button);
+  font-weight: 500;
+  color: var(--black);
+}
+
+.page-reconciliation .recon-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 0;
+  font-weight: 600;
+}
+
+.page-reconciliation .recon-total-amt {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+
+.page-reconciliation .recon-card .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Proof */
+.page-reconciliation .recon-proof-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+  margin-bottom: clamp(48px, 6vw, 72px);
+}
+
+.page-reconciliation .recon-stat-card {
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: clamp(24px, 3vw, 32px);
+  text-align: center;
+}
+
+.page-reconciliation .recon-stat-val {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 4vw, 44px);
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+
+.page-reconciliation .recon-stat-label {
+  font-family: var(--font-button);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.page-reconciliation .recon-proof .quote {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .page-reconciliation .recon-audit-grid,
+  .page-reconciliation .recon-paths-grid,
+  .page-reconciliation .recon-product .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-reconciliation .recon-proof-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-reconciliation .service-compare-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .page-reconciliation .recon-proof .quote footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
