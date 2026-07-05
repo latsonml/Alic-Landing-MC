@@ -10,6 +10,8 @@ export default defineConfig({
         pricing: resolve(__dirname, 'pricing/index.html'),
         mca: resolve(__dirname, 'mca/index.html'),
         reconciliation: resolve(__dirname, 'services/reconciliation/index.html'),
+        privacy: resolve(__dirname, 'privacy-policy/index.html'),
+        terms: resolve(__dirname, 'terms-of-service/index.html'),
       },
     },
   },

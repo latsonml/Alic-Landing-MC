@@ -11,6 +11,8 @@ Marketing site for **Alic** — cash flow management for business. Built with Vi
 | `/pricing/` | Starter, Pro, and Premium plans |
 | `/mca/` | MCA-focused page with censor-char hero and cost calculator |
 | `/services/reconciliation/` | MCA reconciliation service page |
+| `/privacy-policy/` | Privacy Policy |
+| `/terms-of-service/` | Terms of Service |
 
 ## Getting started
 
