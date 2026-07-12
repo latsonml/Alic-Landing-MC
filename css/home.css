@@ -104,7 +104,7 @@
   .case-stats{padding:56px 48px;display:flex;flex-direction:column;gap:0;}
   .case-stat + .case-stat{border-top:1px solid var(--stroke);margin-top:34px;padding-top:34px;}
   .case-stat .num{font-family:var(--font-heading);font-size:64px;letter-spacing:-3px;line-height:1;}
-  .case-num-unit{font-size:40px;}
+  .case-num-unit{font-size:40px;margin-left:0.2em;letter-spacing:0;}
   .case-stat .label{margin-top:10px;color:var(--secondary);font-weight:400;font-size:18px;}
   .case-person{margin-top:auto;padding-top:38px;font-size:17px;font-weight:400;color:var(--secondary);}
   .case-person strong{color:var(--black);font-weight:500;}

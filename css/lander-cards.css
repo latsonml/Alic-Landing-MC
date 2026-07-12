@@ -1,4 +1,4 @@
-/* Lander feature cards — shared scaling shell + forecast, accounts, scenarios */
+/* Lander feature cards — shared scaling shell + forecast, accounts, scenarios, collections */
 
 .lander-card-wrap {
   width: 100%;
@@ -667,6 +667,140 @@
 .scenarios-card-ui .sc-sw.is-scenario {
   border-color: var(--lc-teal);
   border-top-style: dashed;
+}
+
+/* Collections */
+.collections-card-ui {
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.collections-card-ui .cl-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collections-card-ui .cl-crumb {
+  font-size: 14px;
+  color: var(--lc-text-3);
+  margin-bottom: 6px;
+}
+
+.collections-card-ui .cl-top h2 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.collections-card-ui .cl-badge {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--lc-green);
+  background: var(--lc-green-tint);
+  border-radius: 100px;
+  padding: 8px 16px;
+}
+
+.collections-card-ui .cl-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.collections-card-ui .cl-metric {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.collections-card-ui .cl-lbl {
+  font-size: 13px;
+  color: var(--lc-text-3);
+  margin-bottom: 8px;
+}
+
+.collections-card-ui .cl-val {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.collections-card-ui .cl-val.is-warn {
+  color: var(--lc-red);
+}
+
+.collections-card-ui .cl-val.is-pos {
+  color: var(--lc-green);
+}
+
+.collections-card-ui .cl-sub {
+  font-size: 12.5px;
+  color: var(--lc-text-2);
+  margin-top: 6px;
+}
+
+.collections-card-ui .cl-list {
+  background: var(--lc-card);
+  border: 1px solid var(--lc-border);
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.collections-card-ui .cl-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--lc-border);
+}
+
+.collections-card-ui .cl-row:last-child {
+  border-bottom: none;
+}
+
+.collections-card-ui .cl-inv b {
+  display: block;
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.collections-card-ui .cl-inv small {
+  display: block;
+  font-size: 13px;
+  color: var(--lc-text-3);
+  margin-top: 4px;
+}
+
+.collections-card-ui .cl-status {
+  font-size: 12.5px;
+  font-weight: 500;
+  border-radius: 100px;
+  padding: 7px 14px;
+  white-space: nowrap;
+}
+
+.collections-card-ui .cl-status.is-sent {
+  color: var(--lc-navy);
+  background: #eef2f7;
+}
+
+.collections-card-ui .cl-status.is-overdue {
+  color: var(--lc-red);
+  background: var(--lc-red-tint);
+}
+
+.collections-card-ui .cl-status.is-opened {
+  color: var(--lc-amber);
+  background: var(--lc-amber-tint);
+}
+
+.collections-card-ui .cl-status.is-paid {
+  color: var(--lc-green);
+  background: var(--lc-green-tint);
 }
 
 .lander-card-ui svg text {
